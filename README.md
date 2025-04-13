@@ -1,14 +1,12 @@
-# Prince Kumar's Portfolio
-  I'm Prince Kumar, a passionate Software Web Developer
+# React + Vite
 
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Website Features:
-- **Responsive Design:** The website is fully responsive, making it look great on all devices, including mobile phones, tablets, and desktops.
-- **Projects Showcase:** The website features a section to display my recent projects with descriptions and images.
-- **Contact Form:** A contact form is available where visitors can get in touch with me.
-- **Social Media Links:** Includes links to my professional social media profiles such as **LinkedIn**, **GitHub**, **Twitter**, and **Instagram**.
+Currently, two official plugins are available:
 
-## How to View the Portfolio:
-You can view my live portfolio website using the following link:
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-[**Prince Kumar's Portfolio**](https://prince-2028.github.io/My-websites/)
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
