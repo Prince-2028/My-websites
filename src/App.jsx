@@ -2,7 +2,7 @@ import React from "react";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Projects from "./components/Projects";
-import About from "./components/About";
+import Github from "./components/Github";
 import Contact from "./components/Contect";
 import Footer from "./components/Footer";
 
@@ -12,7 +12,7 @@ const App = () => {
       <Header />
       <Hero />
       <Projects />
-      <About />
+      <Github />
       <Contact />
       <Footer />
     </div>
