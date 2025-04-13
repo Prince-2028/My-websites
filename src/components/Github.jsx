@@ -1,12 +1,28 @@
-import React from "react";
+import { React } from "react";
+import GitHubCalendar from "react-github-calendar";
 
 const Github = () => {
   return (
-    <section className="bg-gray-100 py-20 px-6 text-center">
-      <h2 className="text-3xl font-bold mb-6">My-Github</h2>
-      <p className="max-w-3xl mx-auto text-gray-700">
-        I'm a self-taught developer with a passion for learning and building things. My goal is to create beautiful and performant web applications. I enjoy solving problems and constantly seek opportunities to improve my skills.
-      </p>
+    <section className="bg-gradient-to-br from-gray-100 to-blue-100 py-20 px-6 text-center">
+      <h2 className="text-4xl font-extrabold text-gray-800 mb-10  ">
+        GitHub Contributions
+      </h2>
+
+      {/* Responsive scrollable wrapper */}
+      <div className="overflow-x-auto">
+        <div className="inline-block min-w-full">
+          <div className="flex justify-center">
+            <GitHubCalendar
+              username="Prince-2028"
+              blockSize={16}
+              blockMargin={6}
+              color="#0e76a8"
+              fontSize={17}
+              showPrivateContributions={true}
+            />
+          </div>
+        </div>
+      </div>
     </section>
   );
 };
