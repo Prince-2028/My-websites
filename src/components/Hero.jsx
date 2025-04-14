@@ -7,8 +7,7 @@ const Hero = () => {
         Hi, I'm Prince Kumar
       </h1>
       <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-        A passionate Web Developer skilled in React, Tailwind CSS and modern web
-        technologies. I build fast and responsive web apps.
+      👋 Hi, I’m Prince Kumar – a Full-Stack Web Developer passionate about building scalable web applications. I specialize in MERN 
       </p>
       <div className="mt-10">
         <a
