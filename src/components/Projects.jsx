@@ -48,6 +48,24 @@ const Projects = () => {
             View
           </a>
         </div>
+
+        <div className="border p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h3 className="text-xl font-semibold mb-2">
+            Github Profile Analyzer
+          </h3>
+          <p className="text-gray-600">
+            This project also includes a GitHub profile analyzer feature, where
+            you can search and explore any user's GitHub profile to view their
+            public repositories, commits, and contribution activity in detail.
+          </p>
+          <a
+            href="https://githubanalizer.netlify.app/"
+            target="_blank"
+            className="mt-4 inline-block bg-black text-white py-2 px-4 rounded-full hover:bg-gray-800 transition"
+          >
+            View
+          </a>
+        </div>
       </div>
     </section>
   );
