@@ -10,19 +10,19 @@ const Header = () => {
         <nav>
           <ul className="hidden md:flex space-x-8 text-gray-700 font-medium">
             <li className="hover:text-blue-500 cursor-pointer transition">
-              Home
+              <a href="#hero"> Home</a>
             </li>
             <li className="hover:text-blue-500 cursor-pointer transition">
-              Projects
+              <a href="#projects"> Projects</a>
             </li>
             <li className="hover:text-blue-500 cursor-pointer transition">
-              Experience
+              <a href="#github">Experience</a>
             </li>
             <li className="hover:text-blue-500 cursor-pointer transition">
               About
             </li>
             <li className="hover:text-blue-500 cursor-pointer transition">
-              Skills
+              <a href="#skills">Skills</a>
             </li>
           </ul>
         </nav>

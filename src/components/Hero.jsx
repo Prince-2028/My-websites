@@ -2,12 +2,13 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <section className="bg-gray-50 py-20 text-center">
+    <section id="hero" className="bg-gray-50 py-20 text-center">
       <h1 className="text-4xl md:text-5xl font-bold mb-4">
         Hi, I'm Prince Kumar
       </h1>
       <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-      👋 Hi, I’m Prince Kumar – a Full-Stack Web Developer passionate about building scalable web applications. I specialize in MERN 
+        👋 Hi, I’m Prince Kumar – a Full-Stack Web Developer passionate about
+        building scalable web applications. I specialize in MERN
       </p>
       <div className="mt-10">
         <a
