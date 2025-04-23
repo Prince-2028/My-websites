@@ -66,6 +66,19 @@ const Projects = () => {
             View
           </a>
         </div>
+        <div className="border p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h3 className="text-xl font-semibold mb-2">IRCTC Extension</h3>
+          <p className="text-gray-600">
+            A smart browser extension designed specifically for IRCTC users. It
+            saves frequent passenger data and automatically fills it during
+            booking.
+            <br />
+            <br />
+          </p>
+          <div className="mt-4 inline-block bg-black text-white py-2 px-4 rounded-full hover:bg-gray-800 transition">
+            Upcoming
+          </div>
+        </div>
       </div>
     </section>
   );
