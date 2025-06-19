@@ -33,7 +33,7 @@ const Contact = () => {
           <FaFacebookF />
         </a>
         <a
-          href="wa.link/pa2s18"
+          href="https://wa.me/7027236462"
           target="_blank"
           rel="noopener noreferrer"
           className="text-green-500 text-2xl hover:scale-125 transition-transform duration-200"
