@@ -14,7 +14,7 @@ const Header = () => {
               <a href="#projects"> Projects</a>
             </li>
             <li className="hover:text-blue-500 cursor-pointer transition">
-              <a href="#github">Experience</a>
+              <a href="#Experience">Experience</a>
             </li>
             <li className="hover:text-blue-500 cursor-pointer transition">
               About
