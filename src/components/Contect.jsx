@@ -16,7 +16,7 @@ const Contact = () => {
       setTimeout(() => setToast(""), 2000);
       return;
     }
-    setToast("Message sent! (Demo only)");
+    setToast("Message sent! Thank you for reaching out.");
     setForm({ name: "", email: "", message: "" });
     setTimeout(() => setToast(""), 2000);
   };
