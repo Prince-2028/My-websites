@@ -22,20 +22,27 @@ const Contact = () => {
   };
 
   return (
-    <section id="Contact" className="py-20 px-6 bg-white">
-      <div className="max-w-5xl mx-auto flex flex-col md:flex-row gap-12 items-center md:items-start">
-        <div className="w-full md:w-1/2 text-center md:text-left">
-          <h2 className="text-3xl font-bold mb-6">Contact Me</h2>
-          <p className="text-gray-600 mb-4">
-            Feel free to reach out if you'd like to collaborate or just say hello!
+    <section
+      id="contact"
+      className="py-20 px-4 bg-gradient-to-br from-blue-50 to-white"
+    >
+      <div className="max-w-5xl mx-auto bg-white rounded-2xl shadow-2xl flex flex-col md:flex-row overflow-hidden">
+        {/* Left: Contact Info & Socials */}
+        <div className="w-full md:w-1/2 flex flex-col justify-center items-center md:items-start bg-gradient-to-br from-blue-100 to-blue-50 p-8">
+          <h2 className="text-4xl font-extrabold text-blue-800 mb-4 text-center md:text-left">
+            Contact Me
+          </h2>
+          <p className="text-gray-600 mb-4 text-center md:text-left">
+            Feel free to reach out if you'd like to collaborate or just say
+            hello!
           </p>
           <a
             href="mailto:princekumar404@outlook.com"
-            className="text-blue-600 text-lg hover:underline block mb-6"
+            className="text-blue-600 text-lg hover:underline mb-6 text-center md:text-left"
           >
             pk20287022@gmail.com
           </a>
-          <div className="flex justify-center md:justify-start gap-6 mt-4">
+          <div className="flex gap-6 mt-4 justify-center md:justify-start">
             <a
               href="https://www.instagram.com/ll__prince.xx?igshid=NzZhOTFlYzFmZQ%3D%3D"
               target="_blank"
@@ -74,20 +81,21 @@ const Contact = () => {
             </a>
           </div>
         </div>
-        <div className="w-full md:w-1/2 flex justify-center">
+        {/* Right: Contact Form */}
+        <div className="w-full md:w-1/2 flex justify-center items-center bg-white p-8">
           <form
-            className="w-full max-w-md bg-gray-50 rounded-lg shadow-md p-8 flex flex-col gap-4"
+            className="w-full max-w-md flex flex-col gap-4"
             autoComplete="off"
             onSubmit={handleSubmit}
           >
-            <h3 className="text-2xl font-semibold mb-4 text-center">
+            <h3 className="text-2xl font-semibold mb-4 text-center text-blue-700">
               Send a Message
             </h3>
             <input
               type="text"
               name="name"
               placeholder="Your Name"
-              className="border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="border border-blue-200 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
               value={form.name}
               onChange={handleChange}
               required
@@ -96,7 +104,7 @@ const Contact = () => {
               type="email"
               name="email"
               placeholder="Your Email"
-              className="border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="border border-blue-200 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
               value={form.email}
               onChange={handleChange}
               required
@@ -105,7 +113,7 @@ const Contact = () => {
               name="message"
               placeholder="Your Message"
               rows={4}
-              className="border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="border border-blue-200 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
               value={form.message}
               onChange={handleChange}
               required
