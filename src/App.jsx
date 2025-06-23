@@ -5,6 +5,7 @@ import Github from "./components/Github";
 import Contact from "./components/Contect";
 import Footer from "./components/Footer";
 import Skills from "./components/Skills";
+import Experience from "./components/Experience";
 
 const App = () => {
   return (
@@ -12,8 +13,9 @@ const App = () => {
       <Header />
       <Hero />
       <Projects />
-      <Github />
       <Skills />
+      <Experience />
+      <Github />
       <Contact />
       <Footer />
     </div>
