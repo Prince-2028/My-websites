@@ -81,6 +81,23 @@ const Projects = () => {
             View
           </a>
         </div>
+        <div className="border p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h3 className="text-xl font-semibold mb-2">Design Portfolio</h3>
+          <p className="text-gray-600">
+            A creative collection of UI/UX design projects including responsive
+            web pages, mobile app screens, and branding layouts. Built with a
+            focus on modern aesthetics and user-centered experience.
+            <br />
+            <br />
+          </p>
+          <a
+            href="https://designportfoliome.netlify.app/"
+            target="_blank"
+            className="mt-4 inline-block bg-black text-white py-2 px-4 rounded-full hover:bg-gray-800 transition"
+          >
+            View
+          </a>
+        </div>
       </div>
     </section>
   );
