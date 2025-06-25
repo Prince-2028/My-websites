@@ -62,7 +62,7 @@ const Header = () => {
               </li>
               <li onClick={() => setMenuOpen(false)}>
                 <a
-                  href="#Contact"
+                  href="#contact"
                   className="block bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition text-center"
                 >
                   Contact
@@ -73,7 +73,7 @@ const Header = () => {
         </nav>
         <div className="hidden md:block">
           <button className="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 transition">
-            <a href="#Contact">Contact</a>
+            <a href="#contact">Contact</a>
           </button>
         </div>
         <div className="md:hidden">
