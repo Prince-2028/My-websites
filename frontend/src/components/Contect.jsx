@@ -9,15 +9,29 @@ const Contact = () => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!form.name || !form.email || !form.message) {
       setToast("Please fill all fields.");
       setTimeout(() => setToast(""), 2000);
       return;
     }
-    setToast("Message sent! Thank you for reaching out.");
-    setForm({ name: "", email: "", message: "" });
+    try {
+      const res = await fetch("http://localhost:5000/api/message", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      const data = await res.json();
+      if (data.success) {
+        setToast("Message sent! Thank you for reaching out.");
+        setForm({ name: "", email: "", message: "" });
+      } else {
+        setToast("Failed to send message. Try again later.");
+      }
+    } catch (error) {
+      setToast("Server error. Please try again later.");
+    }
     setTimeout(() => setToast(""), 2000);
   };
 
