@@ -1,5 +1,20 @@
 import { useState } from "react";
 import { FaInstagram, FaFacebookF, FaWhatsapp, FaGithub } from "react-icons/fa";
+import { motion } from "framer-motion";
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.18,
+    },
+  },
+};
+const itemVariants = {
+  hidden: { opacity: 0, y: 40 },
+  show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 80, damping: 18 } },
+};
 
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -36,27 +51,38 @@ const Contact = () => {
   };
 
   return (
-    <section
+    <motion.section
       id="contact"
       className="py-20 px-4 bg-gradient-to-br from-blue-50 to-white"
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: false, amount: 0.2 }}
+      variants={containerVariants}
     >
-      <div className="max-w-5xl mx-auto bg-white rounded-2xl shadow-2xl flex flex-col md:flex-row overflow-hidden">
+      <motion.div
+        className="max-w-5xl mx-auto bg-white rounded-2xl shadow-2xl flex flex-col md:flex-row overflow-hidden"
+        variants={containerVariants}
+      >
         {/* Left: Contact Info & Socials */}
-        <div className="w-full md:w-1/2 flex flex-col justify-center items-center md:items-start bg-gradient-to-br from-blue-100 to-blue-50 p-8">
-          <h2 className="text-4xl font-extrabold text-blue-800 mb-4 text-center md:text-left">
+        <motion.div
+          className="w-full md:w-1/2 flex flex-col justify-center items-center md:items-start bg-gradient-to-br from-blue-100 to-blue-50 p-8"
+          variants={itemVariants}
+        >
+          <motion.h2 className="text-4xl font-extrabold text-blue-800 mb-4 text-center md:text-left" variants={itemVariants}>
             Contact Me
-          </h2>
-          <p className="text-gray-600 mb-4 text-center md:text-left">
+          </motion.h2>
+          <motion.p className="text-gray-600 mb-4 text-center md:text-left" variants={itemVariants}>
             Feel free to reach out if you'd like to collaborate or just say
             hello!
-          </p>
-          <a
+          </motion.p>
+          <motion.a
             href="mailto:princekumar404@outlook.com"
             className="text-blue-600 text-lg hover:underline mb-6 text-center md:text-left"
+            variants={itemVariants}
           >
             pk20287022@gmail.com
-          </a>
-          <div className="flex gap-6 mt-4 justify-center md:justify-start">
+          </motion.a>
+          <motion.div className="flex gap-6 mt-4 justify-center md:justify-start" variants={itemVariants}>
             <a
               href="https://www.instagram.com/ll__prince.xx?igshid=NzZhOTFlYzFmZQ%3D%3D"
               target="_blank"
@@ -93,19 +119,23 @@ const Contact = () => {
             >
               <FaGithub />
             </a>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
         {/* Right: Contact Form */}
-        <div className="w-full md:w-1/2 flex justify-center items-center bg-white p-8">
-          <form
+        <motion.div
+          className="w-full md:w-1/2 flex justify-center items-center bg-white p-8"
+          variants={itemVariants}
+        >
+          <motion.form
             className="w-full max-w-md flex flex-col gap-4"
             autoComplete="off"
             onSubmit={handleSubmit}
+            variants={containerVariants}
           >
-            <h3 className="text-2xl font-semibold mb-4 text-center text-blue-700">
+            <motion.h3 className="text-2xl font-semibold mb-4 text-center text-blue-700" variants={itemVariants}>
               Send a Message
-            </h3>
-            <input
+            </motion.h3>
+            <motion.input
               type="text"
               name="name"
               placeholder="Your Name"
@@ -113,8 +143,9 @@ const Contact = () => {
               value={form.name}
               onChange={handleChange}
               required
+              variants={itemVariants}
             />
-            <input
+            <motion.input
               type="email"
               name="email"
               placeholder="Your Email"
@@ -122,8 +153,9 @@ const Contact = () => {
               value={form.email}
               onChange={handleChange}
               required
+              variants={itemVariants}
             />
-            <textarea
+            <motion.textarea
               name="message"
               placeholder="Your Message"
               rows={4}
@@ -131,22 +163,25 @@ const Contact = () => {
               value={form.message}
               onChange={handleChange}
               required
+              variants={itemVariants}
             />
-            <button
+            <motion.button
               type="submit"
               className="bg-blue-600 text-white font-semibold py-2 rounded hover:bg-blue-700 transition-colors"
+              variants={itemVariants}
+              whileHover={{ scale: 1.05 }}
             >
               Send
-            </button>
+            </motion.button>
             {toast && (
-              <div className="text-center text-green-600 font-medium mt-2">
+              <motion.div className="text-center text-green-600 font-medium mt-2" variants={itemVariants}>
                 {toast}
-              </div>
+              </motion.div>
             )}
-          </form>
-        </div>
-      </div>
-    </section>
+          </motion.form>
+        </motion.div>
+      </motion.div>
+    </motion.section>
   );
 };
 

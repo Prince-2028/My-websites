@@ -1,9 +1,51 @@
+import { motion } from "framer-motion";
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.18,
+    },
+  },
+};
+const cardVariants = {
+  hidden: { opacity: 0, y: 60 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { type: "spring", stiffness: 80, damping: 18 },
+  },
+};
+
 const Projects = () => {
   return (
     <section id="projects" className="py-20 px-6 bg-white text-center">
-      <h2 className="text-3xl font-bold mb-12">Projects</h2>
-      <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-        <div className="border p-6 rounded-lg shadow hover:shadow-lg transition">
+      <motion.h2
+        className="text-3xl font-bold mb-12"
+        initial={{ opacity: 0, y: -40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, type: "spring", stiffness: 80 }}
+        viewport={{ once: true }}
+      >
+        Projects
+      </motion.h2>
+      <motion.div
+        className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.2 }}
+      >
+        {/* Weather Application */}
+        <motion.div
+          className="border p-6 rounded-lg shadow hover:shadow-lg transition"
+          variants={cardVariants}
+          whileHover={{
+            scale: 1.04,
+            boxShadow: "0 8px 32px rgba(0,0,0,0.12)",
+          }}
+        >
           <h3 className="text-xl font-semibold mb-2">Weather Application</h3>
           <p className="text-gray-600">
             A weather application that provides real-time weather information
@@ -16,8 +58,16 @@ const Projects = () => {
           >
             View
           </a>
-        </div>
-        <div className="border p-6 rounded-lg shadow hover:shadow-lg transition">
+        </motion.div>
+        {/* AI Resume Builder */}
+        <motion.div
+          className="border p-6 rounded-lg shadow hover:shadow-lg transition"
+          variants={cardVariants}
+          whileHover={{
+            scale: 1.04,
+            boxShadow: "0 8px 32px rgba(0,0,0,0.12)",
+          }}
+        >
           <h3 className="text-xl font-semibold mb-2">AI Resume Builder</h3>
           <p className="text-gray-600">
             An AI-powered resume builder that helps users create professional
@@ -31,8 +81,16 @@ const Projects = () => {
           >
             View
           </a>
-        </div>
-        <div className="border p-6 rounded-lg shadow hover:shadow-lg transition">
+        </motion.div>
+        {/* To-do App */}
+        <motion.div
+          className="border p-6 rounded-lg shadow hover:shadow-lg transition"
+          variants={cardVariants}
+          whileHover={{
+            scale: 1.04,
+            boxShadow: "0 8px 32px rgba(0,0,0,0.12)",
+          }}
+        >
           <h3 className="text-xl font-semibold mb-2">To-do App</h3>
           <p className="text-gray-600">
             A fully functional to-do app with filtering, persistence, and
@@ -45,9 +103,16 @@ const Projects = () => {
           >
             View
           </a>
-        </div>
-
-        <div className="border p-6 rounded-lg shadow hover:shadow-lg transition">
+        </motion.div>
+        {/* Github Profile Analyzer */}
+        <motion.div
+          className="border p-6 rounded-lg shadow hover:shadow-lg transition"
+          variants={cardVariants}
+          whileHover={{
+            scale: 1.04,
+            boxShadow: "0 8px 32px rgba(0,0,0,0.12)",
+          }}
+        >
           <h3 className="text-xl font-semibold mb-2">
             Github Profile Analyzer
           </h3>
@@ -63,8 +128,16 @@ const Projects = () => {
           >
             View
           </a>
-        </div>
-        <div className="border p-6 rounded-lg shadow hover:shadow-lg transition">
+        </motion.div>
+        {/* IRCTC Extension */}
+        <motion.div
+          className="border p-6 rounded-lg shadow hover:shadow-lg transition"
+          variants={cardVariants}
+          whileHover={{
+            scale: 1.04,
+            boxShadow: "0 8px 32px rgba(0,0,0,0.12)",
+          }}
+        >
           <h3 className="text-xl font-semibold mb-2">IRCTC Extension</h3>
           <p className="text-gray-600">
             A smart browser extension designed specifically for IRCTC users. It
@@ -80,8 +153,16 @@ const Projects = () => {
           >
             View
           </a>
-        </div>
-        <div className="border p-6 rounded-lg shadow hover:shadow-lg transition">
+        </motion.div>
+        {/* Design Portfolio */}
+        <motion.div
+          className="border p-6 rounded-lg shadow hover:shadow-lg transition"
+          variants={cardVariants}
+          whileHover={{
+            scale: 1.04,
+            boxShadow: "0 8px 32px rgba(0,0,0,0.12)",
+          }}
+        >
           <h3 className="text-xl font-semibold mb-2">Design Portfolio</h3>
           <p className="text-gray-600">
             A creative collection of UI/UX design projects including responsive
@@ -97,8 +178,8 @@ const Projects = () => {
           >
             View
           </a>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };
