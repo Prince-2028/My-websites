@@ -19,6 +19,7 @@ const itemVariants = {
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [toast, setToast] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -31,6 +32,7 @@ const Contact = () => {
       setTimeout(() => setToast(""), 2000);
       return;
     }
+    setLoading(true);
     try {
       const res = await fetch("https://my-websites-2.onrender.com/api/message", {
         method: "POST",
@@ -47,6 +49,7 @@ const Contact = () => {
     } catch (error) {
       setToast("Server error. Please try again later.");
     }
+    setLoading(false);
     setTimeout(() => setToast(""), 2000);
   };
 
@@ -167,11 +170,18 @@ const Contact = () => {
             />
             <motion.button
               type="submit"
-              className="bg-blue-600 text-white font-semibold py-2 rounded hover:bg-blue-700 transition-colors"
+              className="bg-blue-600 text-white font-semibold py-2 rounded hover:bg-blue-700 transition-colors flex items-center justify-center"
               variants={itemVariants}
               whileHover={{ scale: 1.05 }}
+              disabled={loading}
             >
-              Send
+              {loading ? (
+                <svg className="animate-spin h-5 w-5 mr-2 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
+                </svg>
+              ) : null}
+              {loading ? "Sending..." : "Send"}
             </motion.button>
             {toast && (
               <motion.div className="text-center text-green-600 font-medium mt-2" variants={itemVariants}>
