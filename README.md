@@ -5,7 +5,7 @@ Built using **React.js** and **Tailwind CSS**, this project showcases my skills,
 
 🔗 **Live Demo:** [https://princefolioverse.netlify.app](https://princefolioverse.netlify.app)
 
----
+------
 
 ## 🚀 Technologies Used
 
