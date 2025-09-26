@@ -43,7 +43,7 @@ const Hero = () => {
       </motion.p>
       <motion.div className="mt-10" variants={itemVariants}>
         <a
-          href="./PrinceResume.pdf"
+          href="./Prince_resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block bg-gradient-to-r from-blue-600 to-blue-800 text-white text-lg font-medium px-8 py-3 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300"
