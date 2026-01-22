@@ -147,7 +147,7 @@ const Projects = () => {
             <br />
           </p>
           <a
-            href="https://github.com/Prince-2028/My-extention.git"
+            href="https://chromewebstore.google.com/detail/fmbodhmoimogpgihmkfepgjleceojaeh?utm_source=item-share-cb"
             target="_blank"
             className="mt-4 inline-block bg-black text-white py-2 px-4 rounded-full hover:bg-gray-800 transition"
           >
