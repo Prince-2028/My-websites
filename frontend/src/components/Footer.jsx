@@ -2,7 +2,7 @@ import { FaInstagram, FaFacebookF, FaGithub } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="relative bg-gradient-to-r from-blue-900 via-blue-800 to-gray-900 text-white py-5 mt-10 shadow-inner">
+    <footer className="relative bg-gradient-to-r from-blue-900 via-blue-800 to-gray-900 text-white py-7 mt-10 shadow-inner border-t border-blue-900/30">
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-pink-400 via-blue-400 to-green-400 opacity-70 rounded-t-lg"></div>
       <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between px-4 gap-6">
         <div className="flex items-center gap-3 mb-4 md:mb-0">

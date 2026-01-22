@@ -46,7 +46,7 @@ const itemVariants = {
 const InternshipExperience = () => (
   <motion.section
     id="InternshipExperience"
-    className="py-20 bg-gradient-to-b from-gray-50 to-gray-100"
+    className="py-24 bg-gradient-to-b from-gray-50 to-gray-100"
     initial="hidden"
     whileInView="show"
     viewport={{ once: false, amount: 0.2 }}
@@ -54,20 +54,19 @@ const InternshipExperience = () => (
   >
     <motion.div className="container mx-auto px-6" variants={containerVariants}>
       <motion.h2
-        className="text-4xl font-bold text-center text-gray-800 mb-16"
+        className="section-title text-center text-gray-800 mb-16"
         variants={itemVariants}
       >
         Internship Experience
       </motion.h2>
-
       <motion.div
-        className="relative max-w-4xl mx-auto border-l-2 border-gray-300 space-y-10"
+        className="relative max-w-4xl mx-auto border-l-2 border-blue-200 space-y-10"
         variants={containerVariants}
       >
         <motion.div className="relative pl-10 pb-10" variants={itemVariants}>
           <span className="absolute left-[-9px] top-2 w-5 h-5 bg-blue-600 rounded-full border-4 border-white shadow-lg"></span>
           <motion.div
-            className="bg-white rounded-xl shadow-lg p-8 border border-gray-100 hover:shadow-xl transition-shadow"
+            className="bg-white rounded-xl shadow-lg p-10 border border-blue-100 hover:shadow-xl transition-shadow"
             variants={itemVariants}
           >
             <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-4">

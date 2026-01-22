@@ -52,11 +52,11 @@ const Skills = () => {
       variants={containerVariants}
     >
       <motion.div
-        className="bg-white rounded-2xl max-w-4xl w-full"
+        className="bg-white rounded-2xl max-w-4xl w-full shadow-lg p-10 border border-blue-100"
         variants={containerVariants}
       >
         <motion.h2
-          className="text-3xl font-bold text-center text-gray-800 mb-10"
+          className="section-title mb-10"
           variants={itemVariants}
         >
           Skills
@@ -65,7 +65,7 @@ const Skills = () => {
           {skills.map((skill, index) => (
             <motion.div
               key={index}
-              className="flex flex-col items-center bg-gray-50 p-4 rounded-xl transition duration-300"
+              className="flex flex-col items-center bg-gray-50 p-4 rounded-xl transition duration-300 shadow hover:shadow-xl"
               variants={itemVariants}
               whileHover={{
                 scale: 1.08,

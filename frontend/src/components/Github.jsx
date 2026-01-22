@@ -18,14 +18,14 @@ const itemVariants = {
 const Github = () => {
   return (
     <motion.section
-      className="bg-gradient-to-br from-gray-100 to-blue-100 py-2 px-4 text-center"
+      className="bg-gradient-to-br from-gray-100 to-blue-100 py-12 px-4 text-center"
       initial="hidden"
       whileInView="show"
       viewport={{ once: false, amount: 0.2 }}
       variants={containerVariants}
     >
       <motion.h2
-        className="text-4xl font-extrabold text-gray-800 mb-10"
+        className="section-title mb-10"
         variants={itemVariants}
       >
         GitHub Contributions

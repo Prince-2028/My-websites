@@ -22,31 +22,31 @@ const Hero = () => {
   return (
     <motion.section
       id="hero"
-      className="bg-gray-50 py-20 text-center"
+      className="bg-gradient-to-br from-blue-50 via-white to-indigo-100 py-24 text-center min-h-[60vh] flex flex-col justify-center items-center"
       initial="hidden"
       whileInView="show"
       viewport={{ once: false, amount: 0.2 }}
       variants={containerVariants}
     >
       <motion.h1
-        className="text-4xl md:text-5xl font-bold mb-4"
+        className="text-5xl md:text-6xl font-extrabold mb-6 text-blue-800 drop-shadow-sm"
         variants={itemVariants}
       >
         Hi, I'm Prince Kumar
       </motion.h1>
       <motion.p
-        className="text-lg text-gray-600 max-w-2xl mx-auto"
+        className="text-xl text-gray-700 max-w-2xl mx-auto mb-8"
         variants={itemVariants}
       >
         👋 Hi, I’m Prince Kumar – a Full-Stack Web Developer passionate about
         building scalable web applications. I specialize in MERN
       </motion.p>
-      <motion.div className="mt-10" variants={itemVariants}>
+      <motion.div className="mt-8" variants={itemVariants}>
         <a
           href="./Prince_resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block bg-gradient-to-r from-blue-600 to-blue-800 text-white text-lg font-medium px-8 py-3 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300"
+          className="btn-primary text-lg shadow-lg"
         >
           View Resume
         </a>

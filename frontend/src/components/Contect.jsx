@@ -56,22 +56,22 @@ const Contact = () => {
   return (
     <motion.section
       id="contact"
-      className="py-20 px-4 bg-gradient-to-br from-blue-50 to-white"
+      className="py-24 px-4 bg-gradient-to-br from-blue-50 to-white"
       initial="hidden"
       whileInView="show"
       viewport={{ once: false, amount: 0.2 }}
       variants={containerVariants}
     >
       <motion.div
-        className="max-w-5xl mx-auto bg-white rounded-2xl shadow-2xl flex flex-col md:flex-row overflow-hidden"
+        className="max-w-5xl mx-auto bg-white rounded-3xl shadow-2xl flex flex-col md:flex-row overflow-hidden border border-blue-100"
         variants={containerVariants}
       >
         {/* Left: Contact Info & Socials */}
         <motion.div
-          className="w-full md:w-1/2 flex flex-col justify-center items-center md:items-start bg-gradient-to-br from-blue-100 to-blue-50 p-8"
+          className="w-full md:w-1/2 flex flex-col justify-center items-center md:items-start bg-gradient-to-br from-blue-100 to-blue-50 p-10"
           variants={itemVariants}
         >
-          <motion.h2 className="text-4xl font-extrabold text-blue-800 mb-4 text-center md:text-left" variants={itemVariants}>
+          <motion.h2 className="section-title text-blue-800 mb-4 text-center md:text-left" variants={itemVariants}>
             Contact Me
           </motion.h2>
           <motion.p className="text-gray-600 mb-4 text-center md:text-left" variants={itemVariants}>
@@ -126,7 +126,7 @@ const Contact = () => {
         </motion.div>
         {/* Right: Contact Form */}
         <motion.div
-          className="w-full md:w-1/2 flex justify-center items-center bg-white p-8"
+          className="w-full md:w-1/2 flex justify-center items-center bg-white p-10"
           variants={itemVariants}
         >
           <motion.form
@@ -170,7 +170,7 @@ const Contact = () => {
             />
             <motion.button
               type="submit"
-              className="bg-blue-600 text-white font-semibold py-2 rounded hover:bg-blue-700 transition-colors flex items-center justify-center"
+              className="btn-primary text-lg flex items-center justify-center"
               variants={itemVariants}
               whileHover={{ scale: 1.05 }}
               disabled={loading}

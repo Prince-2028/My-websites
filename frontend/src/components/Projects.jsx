@@ -20,9 +20,9 @@ const cardVariants = {
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-20 px-6 bg-white text-center">
+    <section id="projects" className="py-24 px-6 bg-white text-center">
       <motion.h2
-        className="text-3xl font-bold mb-12"
+        className="section-title mb-12"
         initial={{ opacity: 0, y: -40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, type: "spring", stiffness: 80 }}
@@ -31,7 +31,7 @@ const Projects = () => {
         Projects
       </motion.h2>
       <motion.div
-        className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto"
+        className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto"
         variants={containerVariants}
         initial="hidden"
         whileInView="show"
@@ -39,7 +39,7 @@ const Projects = () => {
       >
         {/* Weather Application */}
         <motion.div
-          className="border p-6 rounded-lg shadow hover:shadow-lg transition"
+          className="card border border-blue-100 hover:shadow-xl"
           variants={cardVariants}
           whileHover={{
             scale: 1.04,
@@ -54,14 +54,14 @@ const Projects = () => {
           <a
             href="https://wethercastnow.netlify.app/"
             target="_blank"
-            className="mt-4 inline-block bg-black text-white py-2 px-4 rounded-full hover:bg-gray-800 transition"
+            className="mt-4 inline-block btn-primary"
           >
             View
           </a>
         </motion.div>
         {/* AI Resume Builder */}
         <motion.div
-          className="border p-6 rounded-lg shadow hover:shadow-lg transition"
+          className="card border border-blue-100 hover:shadow-xl"
           variants={cardVariants}
           whileHover={{
             scale: 1.04,
@@ -77,14 +77,14 @@ const Projects = () => {
           <a
             href="https://resumecreateai.netlify.app/"
             target="_blank"
-            className="mt-4 inline-block bg-black text-white py-2 px-4 rounded-full hover:bg-gray-800 transition"
+            className="mt-4 inline-block btn-primary"
           >
             View
           </a>
         </motion.div>
         {/* To-do App */}
         <motion.div
-          className="border p-6 rounded-lg shadow hover:shadow-lg transition"
+          className="card border border-blue-100 hover:shadow-xl"
           variants={cardVariants}
           whileHover={{
             scale: 1.04,
@@ -99,14 +99,14 @@ const Projects = () => {
           <a
             href="https://prince-2028.github.io/Achieve_Aura/"
             target="_blank"
-            className="mt-4 inline-block bg-black text-white py-2 px-4 rounded-full hover:bg-gray-800 transition"
+            className="mt-4 inline-block btn-primary"
           >
             View
           </a>
         </motion.div>
         {/* Github Profile Analyzer */}
         <motion.div
-          className="border p-6 rounded-lg shadow hover:shadow-lg transition"
+          className="card border border-blue-100 hover:shadow-xl"
           variants={cardVariants}
           whileHover={{
             scale: 1.04,
@@ -124,14 +124,14 @@ const Projects = () => {
           <a
             href="https://githubanalizer.netlify.app/"
             target="_blank"
-            className="mt-4 inline-block bg-black text-white py-2 px-4 rounded-full hover:bg-gray-800 transition"
+            className="mt-4 inline-block btn-primary"
           >
             View
           </a>
         </motion.div>
         {/* IRCTC Extension */}
         <motion.div
-          className="border p-6 rounded-lg shadow hover:shadow-lg transition"
+          className="card border border-blue-100 hover:shadow-xl"
           variants={cardVariants}
           whileHover={{
             scale: 1.04,
@@ -149,14 +149,14 @@ const Projects = () => {
           <a
             href="https://github.com/Prince-2028/My-extention.git"
             target="_blank"
-            className="mt-4 inline-block bg-black text-white py-2 px-4 rounded-full hover:bg-gray-800 transition"
+            className="mt-4 inline-block btn-primary"
           >
             View
           </a>
         </motion.div>
         {/* Design Portfolio */}
         <motion.div
-          className="border p-6 rounded-lg shadow hover:shadow-lg transition"
+          className="card border border-blue-100 hover:shadow-xl"
           variants={cardVariants}
           whileHover={{
             scale: 1.04,
@@ -174,7 +174,7 @@ const Projects = () => {
           <a
             href="https://designportfoliome.netlify.app/"
             target="_blank"
-            className="mt-4 inline-block bg-black text-white py-2 px-4 rounded-full hover:bg-gray-800 transition"
+            className="mt-4 inline-block btn-primary"
           >
             View
           </a>

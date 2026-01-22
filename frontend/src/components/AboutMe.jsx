@@ -19,7 +19,7 @@ const AboutMe = () => {
   return (
     <motion.section
       id="about"
-      className="bg-white py-10 px-4 md:px-0"
+      className="bg-white py-16 px-4 md:px-0 shadow-inner"
       initial="hidden"
       whileInView="show"
       viewport={{ once: false, amount: 0.2 }}
@@ -32,11 +32,11 @@ const AboutMe = () => {
         <motion.img
           src={profilePic}
           alt="Prince Kumar profile"
-          className="w-32 h-32 rounded-full shadow-lg mb-4 object-cover border-4 border-blue-500"
+          className="w-36 h-36 rounded-full shadow-xl mb-6 object-cover border-4 border-blue-500"
           variants={itemVariants}
         />
         <motion.h2
-          className="text-3xl font-bold text-blue-600 mb-2"
+          className="section-title"
           variants={itemVariants}
         >
           About Me
